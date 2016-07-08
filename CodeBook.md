@@ -22,8 +22,10 @@ The data was downloaded from: [https://d396qusza40orc.cloudfront.net/getdata%2Fp
 **Code book**
 
 1.Load activity labels and features from
-  a.activity\_labels.txt
-  b.features.txt
+
+activity\_labels.txt
+
+features.txt
 
 Changed activity labels and features to characters
 
@@ -31,26 +33,38 @@ Changed activity labels and features to characters
 
 Used grep to search files for the occurrence of a string of characters that matched mean and std in the features table.
 
-Used the gsub function for to clean up the data labels, specifically replaced –mean with Mean and –std with Std
+Used the gsub function for to clean up the data labels, specifically replaced â€“mean with Mean and â€“std with Std
 
 3.Load the datasets by reading in the tables of data located in
-  a.subject\_train.txt
-  b.x\_train.txt
-  c.y\_train.txt
-  d.subject\_test.txt
-  e.x\_test.txt
-  f.y\_test.txt
+
+subject\_train.txt
+
+x\_train.txt
+
+y\_train.txt
+
+subject\_test.txt
+
+x\_test.txt
+
+y\_test.txt
 
 4.Merge the training and the test sets to create one data set and use descriptive activity names to name the activities in the data set
-  a.First used cbind to combine the columns from X\_train.txt using  trainSubject and trainActivity.
-  b.Second used cbind to combine the columns from X\_test.txt using testSubject and testActivities Assign column names and merge to create one data set.
-  c.The used rbind to combine the rows from the train and test data sets to make one data set
-  d.Then renamed the column names
+
+First used cbind to combine the columns from X\_train.txt using  trainSubject and trainActivity.
+
+Second used cbind to combine the columns from X\_test.txt using testSubject and testActivities Assign column names and merge to create one data set.
+
+The used rbind to combine the rows from the train and test data sets to make one data set
+
+Then renamed the column names
 
 5.Change activities &amp; subjects into factors
 
 6.Using melt change the id to subject and activity and then use dcast to make the data frame output
 
 7.Create a second independent tidy data set
-  a.It produced a tidy data set with the average of each variable for each activity and subject
-  b.The file was saved as a txt file
+
+It produced a tidy data set with the average of each variable for each activity and subject
+
+The file was saved as a txt file
