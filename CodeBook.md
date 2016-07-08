@@ -30,10 +30,8 @@ The data was downloaded from: [https://d396qusza40orc.cloudfront.net/getdata%2Fp
 Changed activity labels and features to characters
 
 2. Extract only the measurements on the mean and standard deviation for each measurement
-
-  Used grep to search files for the occurrence of a string of characters that matched mean and std in the features table.
-
-  Used the gsub function for to clean up the data labels, specifically replaced –mean with Mean and –std with Std
+- Used grep to search files for the occurrence of a string of characters that matched mean and std in the features table.
+- Used the gsub function for to clean up the data labels, specifically replaced –mean with Mean and –std with Std
 
 3.Load the datasets by reading in the tables of data located in
 
